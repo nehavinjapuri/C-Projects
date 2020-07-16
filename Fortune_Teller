@@ -1,0 +1,264 @@
+using System;             						           	
+using System.Collections.Generic;                                  			
+using System.Linq;								
+
+using System.Text;							
+using System.Threading.Tasks;
+
+namespace VinjapuriNFortuneCookie
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaring Variables
+            string color, first, second, third;
+            int firstNum, secondNum, thirdNum;
+
+            //Instructions
+	Console.WriteLine("Hold the fortune teller where pink is on the bottom right and yellow on the bottom left.");
+            Console.WriteLine("Always start by opening the fortune teller upward, and always start a new round with the teller closed (neutral).");
+            Console.WriteLine("For colors, spell it out while switching the teller for each letter. (ex. g-r-e-e-n)");
+            Console.WriteLine();
+            Console.WriteLine("Please choose a color: Pink, Yellow, Green, or Red");
+            Console.WriteLine("Type your answer and press enter.");
+            color = Console.ReadLine();
+            Console.WriteLine();
+
+
+            //If statements (Color)
+            if (color.Length == 4 || color.Length == 6 )
+            {
+                Console.WriteLine("Choose a number: 3, 4, 7, or 8");
+                Console.WriteLine("Type your answer and press enter.");
+                first = Console.ReadLine();
+            }
+            
+            else 
+            {
+                Console.WriteLine("Choose a number: 1, 2, 5, or 6");
+                Console.WriteLine("Type your answer and press enter.");
+                first = Console.ReadLine();
+            }
+            Console.WriteLine();
+
+            //If statements (Number)
+            firstNum = int.Parse(first);
+            if (firstNum == 1 || firstNum == 3|| firstNum == 5|| firstNum == 7)
+            {
+                Console.WriteLine("Choose a number: 1, 2, 5, or 6");
+                Console.WriteLine("Type your answer and press enter.");
+                second = Console.ReadLine();
+
+            }
+
+            else
+            {
+                Console.WriteLine("Choose a number: 3, 4, 7, or 8");
+                Console.WriteLine("Type your answer and press enter.");
+                second = Console.ReadLine();
+                
+            }
+            Console.WriteLine();
+
+            //If statements (Number 2)
+            secondNum = int.Parse(second);
+            if (secondNum == 1 || secondNum == 3 || secondNum == 5 || secondNum == 7)
+            {
+                Console.WriteLine("Choose a number: 1, 2, 5, or 6");
+                Console.WriteLine("Type your answer and press enter.");
+                third = Console.ReadLine();
+
+            }
+
+            else
+            {
+                Console.WriteLine("Choose a number: 3, 4, 7, or 8");
+                Console.WriteLine("Type your answer and press enter.");
+                third = Console.ReadLine();
+
+            }
+
+            //If statements (Number 3)
+            thirdNum = int.Parse(third);
+            if (thirdNum == 1)
+            {
+                Console.WriteLine("You will meet the love of your life.");
+            }
+
+            if (thirdNum == 2)
+            {
+                Console.WriteLine("You will pass this class with an A.");
+            }
+
+            if (thirdNum == 3)
+            {
+                Console.WriteLine("You will receive some money today.");
+            }
+
+            if (thirdNum == 4)
+            {
+                Console.WriteLine("You will run into an old friend soon.");
+            }
+
+            if (thirdNum == 5)
+            {
+                Console.WriteLine("You will have fame and fortune.");
+            }
+
+            if (thirdNum == 6)
+            {
+                Console.WriteLine("You will have a dream with a pig in it.");
+            }
+
+            if (thirdNum == 7)
+            {
+                Console.WriteLine("You will be surprised soon.");
+            }
+
+            if (thirdNum == 8)
+            {
+                Console.WriteLine("You will find a penny on the ground.");
+            }
+
+            Console.WriteLine("Thanks for playing!");
+            Console.Read();
+
+        }//End Main
+    }//End Class
+}//End Namespace
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNFortuneCookie
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaring Variables
+            string color, first, second, third;
+            int firstNum, secondNum, thirdNum;
+
+            //Instructions
+            Console.WriteLine("Hold the fortune teller where pink is on the bottom right and yellow on the bottom left.");
+            Console.WriteLine("Always start by opening the fortune teller upward, and always start a new round with the teller closed (neutral).");
+            Console.WriteLine("For colors, spell it out while switching the teller for each letter. (ex. g-r-e-e-n)");
+            Console.WriteLine();
+            Console.WriteLine("Please choose a color: Pink, Yellow, Green, or Red");
+            Console.WriteLine("Type your answer and press enter.");
+            color = Console.ReadLine();
+
+            Console.WriteLine();
+            //If statements (Color)
+            if (color.Length == 4 || color.Length == 6 )
+            {
+                Console.WriteLine("Choose a number: 3, 4, 7, or 8");
+                Console.WriteLine("Type your answer and press enter.");
+                first = Console.ReadLine();
+            }
+            
+            else 
+            {
+                Console.WriteLine("Choose a number: 1, 2, 5, or 6");
+                Console.WriteLine("Type your answer and press enter.");
+                first = Console.ReadLine();
+            }
+
+            Console.WriteLine();
+            //If statements (Number)
+            firstNum = int.Parse(first);
+            if (firstNum == 1 || firstNum == 3|| firstNum == 5|| firstNum == 7)
+            {
+                Console.WriteLine("Choose a number: 1, 2, 5, or 6");
+                Console.WriteLine("Type your answer and press enter.");
+                second = Console.ReadLine();
+
+            }
+
+            else
+            {
+                Console.WriteLine("Choose a number: 3, 4, 7, or 8");
+                Console.WriteLine("Type your answer and press enter.");
+                second = Console.ReadLine();
+                
+            }
+            Console.WriteLine();
+
+            //If statements (Number 2)
+            secondNum = int.Parse(second);
+            if (secondNum == 1 || secondNum == 3 || secondNum == 5 || secondNum == 7)
+            {
+                Console.WriteLine("Choose a number: 1, 2, 5, or 6");
+                Console.WriteLine("Type your answer and press enter.");
+                third = Console.ReadLine();
+
+            }
+
+            else
+            {
+                Console.WriteLine("Choose a number: 3, 4, 7, or 8");
+                Console.WriteLine("Type your answer and press enter.");
+                third = Console.ReadLine();
+
+            }
+
+            Console.WriteLine();
+            //If statements (Number 3)
+            thirdNum = int.Parse(third);
+            if (thirdNum == 1)
+            {
+                Console.WriteLine("You will meet the love of your life.");
+            }
+
+            if (thirdNum == 2)
+            {
+                Console.WriteLine("You will pass this class with an A.");
+            }
+
+            if (thirdNum == 3)
+            {
+                Console.WriteLine("You will receive some money today.");
+            }
+
+            if (thirdNum == 4)
+            {
+                Console.WriteLine("You will run into an old friend soon.");
+            }
+
+            if (thirdNum == 5)
+            {
+                Console.WriteLine("You will have fame and fortune.");
+            }
+
+            if (thirdNum == 6)
+            {
+                Console.WriteLine("You will have a dream with a pig in it.");
+            }
+
+            if (thirdNum == 7)
+            {
+                Console.WriteLine("You will be surprised soon.");
+            }
+
+            if (thirdNum == 8)
+            {
+                Console.WriteLine("You will find a penny on the ground.");
+            }
+
+            Console.WriteLine("Thanks for playing!");
+            Console.Read();
+
+
+
+
+
+
+        }//End Main
+    }//End Class
+}//End Namespace
+
