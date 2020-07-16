@@ -1,0 +1,214 @@
+//Main
+//Letter
+//Checking Letters
+//Win 
+//Lose
+//Hangdudes
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace VinjapuriNHangman
+{
+    class Program
+    {
+
+        public static string[] wrong = new string[30];
+        public static string word = "";
+        public static string[] final = new string[30];
+
+        public static void Main(string[] args)
+        {
+            //String Declarations
+            int man = 0;
+            int wrongIndex = -1;
+            int counter = 0;
+            int winCounter = 0;
+
+
+            //Input
+            Console.WriteLine("Welcome to Hangman!");
+            Console.WriteLine("Type in a word and press enter.");
+            word = Console.ReadLine().ToLower();
+
+            //Array Declarations
+            string[] guessArray = new string[word.Length + 6];
+            Console.Clear();
+
+
+
+            //Word Array
+            string[] wordArray = new string[word.Length];
+            string[] marks = new string[30];
+
+
+
+
+            //Making word into array
+            for (int i = 0; i < word.Length; i++)
+            {
+                wordArray[i] = word.Substring(i, 1);
+            }
+
+            //Chances
+            for (int j = 0; j < (word.Length + 6); j++)
+            {
+                //Checking if guess is right, wrong, or repeated
+                guessArray[j] = Letter(man, (word.Length), word);
+
+
+                for (int y = 0; y < (word.Length); y++)
+                {
+                    //Right Letters
+                    if (guessArray[j] == wordArray[y])
+                    {
+                        final[y] = guessArray[j];
+                        counter--;
+                        winCounter++;
+
+                    }
+
+                }
+
+                //If Letter is Wrong
+                if (counter == 0)
+                {
+
+                    man++;
+                    wrongIndex++;
+                    wrong[wrongIndex] = guessArray[j];
+                }
+
+                //If Letter is Right
+                else
+                {
+                    counter = 0;
+                }
+
+                //Win Display
+                while (winCounter == word.Length)
+                {
+                    Console.Clear();
+                    Console.WriteLine("YOU WIN!");
+                    Thread.Sleep(5000);
+                    Environment.Exit(0);
+                }
+
+            }
+
+            Console.Read();
+
+        }
+
+
+
+        //Letter (Guess Function)
+        public static string Letter(int num, int length, string wordprint)
+        {
+            string guess = "";
+            Console.Clear();
+
+            //Lose Dispay
+            if (num > 5)
+            {
+                Console.WriteLine("YOU LOSE! The word was " + wordprint + ".");
+                return "";
+            }
+
+
+            else
+            {
+                Console.WriteLine(HangDudes(num));
+                Console.WriteLine("Hint: The word is " + length + " letters long.");
+                Console.WriteLine();
+                Console.WriteLine("Word: ");
+                Console.WriteLine(string.Join(" ", final));
+                Console.WriteLine();
+                Console.WriteLine();
+
+                Console.WriteLine("Wrong Letters: ");
+                Console.WriteLine(string.Join(" ", wrong));
+                Console.WriteLine();
+                Console.Write("Guess a letter: ");
+
+                guess = (Console.ReadLine()).ToLower();
+                if (guess.Length == 1)
+                {
+                    return guess;
+                }
+
+                else
+                {
+                    Console.WriteLine("Please type in ONE LETTER. ");
+                    guess = (Console.ReadLine()).ToLower();
+                    return guess;
+                }
+            }
+
+
+        }
+
+        //Hangdudes
+        public static string HangDudes(int num)
+        {
+            string[] dudes = { @"
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========", @"
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========", @"
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========", @"
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========", @"
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========", @"
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========", @"
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========" };
+
+            return dudes[num];
+
+        }
+
+    }
+}
