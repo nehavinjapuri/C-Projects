@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNRadians
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             //Declaring Variables
+            string a;
+            double b;
+            Console.Write("Enter an angle in degrees: ");
+
+            //User Input
+            a = Console.ReadLine();
+
+            //Calculations
+            b = double.Parse(a);
+            b = b * 3.141592658979323;
+            b = b / 180;
+           
+            //Output
+            Console.WriteLine("Angle converted to radians is "+ b );
+            Console.ReadKey();
+
+        }//End Main
+    }//End Class
+}End Namespace
+
+
+
+
+
+
