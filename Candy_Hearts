@@ -1,0 +1,226 @@
+//Main
+//Greet1
+//Greet2
+//Greet3
+//Name1
+//Name2
+//Name3
+//Verb1
+//Verb2
+//Verb3
+//Verb4
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNCandyHearts
+{
+    class Program
+    {
+        static void Main()
+        {
+            //Color
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Magenta;
+
+            //Declaring Variables
+            string one = "";
+            string two = "";
+            string three = "";
+            string four = "";
+            string five = "";
+            string six = "";
+            string seven = "";
+            string eight = "";
+            string nine = "";
+
+            //Input
+            Console.WriteLine("Welcome to the Conversation Heart Maker!");
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("What's the name of your valentine?");
+            string love = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Oooh... Interesting...");
+
+            //Q1
+            Console.WriteLine("Give me a number between 1 and 3.");
+            string first = Console.ReadLine();
+            Console.WriteLine();
+
+            if (first == "1")
+            {
+                one = Greet1();
+                four = Greet2();
+                seven = Greet3();
+            }
+
+            if (first == "2")
+            {
+                one = Greet2();
+                four = Greet3();
+                seven = Greet1();
+            }
+            if (first == "3")
+            {
+                one = Greet3();
+                four = Greet1();
+                seven = Greet2();
+            }
+            
+            //Q2
+            Console.WriteLine("Red, Pink, or White? (Type in lowercase letters)");
+            string second = Console.ReadLine();
+            Console.WriteLine();
+
+            if (second == "red")
+            {
+                two = Name1();
+                five = Name2();
+                eight = Name3();
+            }
+            if (second == "pink")
+            {
+                two = Name2();
+                five = Name3();
+                eight = Name1();
+            }
+            if (second == "white")
+            {
+                two = Name3();
+                five = Name2();
+                eight = Name1();
+            }
+            
+            //Q3
+            Console.WriteLine("Flowers, Chocolate, Candy, or Teddy Bear? (Type in lowercase letters) ");
+            string third = Console.ReadLine();
+            Console.WriteLine();
+
+            if (third == "flowers")
+            {
+                three = Verb1();
+                six = Verb2();
+                nine = Verb3();
+            }
+            if (third == "chocolate")
+            {
+                three = Verb2();
+                six = Verb3();
+                nine = Verb4();
+            }
+            if (third == "candy")
+            {
+                three = Verb3();
+                six = Verb4();
+                nine = Verb1();
+            }
+            if (third == "teddy bear")
+            {
+                three = Verb4();
+                six = Verb1();
+                nine = Verb2();
+            }
+           
+
+
+            
+
+            //Message
+            Console.WriteLine("Here is your candy heart message:");
+            Console.WriteLine();
+            Console.WriteLine("Dear " + love + ",");
+            Console.Write("  " + one);
+            Console.Write(two);
+            Console.WriteLine(three);
+
+            Console.Write("  " + four);
+            Console.Write(five);
+            Console.WriteLine(six);
+
+            Console.Write("  " + seven);
+            Console.Write(eight);
+            Console.WriteLine(nine);
+
+            Console.WriteLine("                        Love,");
+            Console.WriteLine("                        " + name);
+            Console.WriteLine();
+            
+            Console.WriteLine("        ooo       ooo  ");
+            Console.WriteLine("      ooooooo   ooooooo  ");
+            Console.WriteLine("      ooooooooooooooooo  ");
+            Console.WriteLine("       ooooooooooooooo   ");
+            Console.WriteLine("         ooooooooooo  ");
+            Console.WriteLine("           ooooooo ");
+            Console.WriteLine("             ooo ");
+            Console.WriteLine("              o ");
+            Console.Read();
+
+
+
+
+        }
+
+        static string Greet1()
+        {
+            return "Hi ";
+            
+        }//End Greet1
+
+        static string Greet2()
+        {
+            return "Hello ";
+        }//End Greet2
+
+        static string Greet3()
+        {
+            return "Heyyyyy ";
+        }//End Greet3
+
+        static string Name1()
+        {
+            return "Lovebug, ";
+        }//End Name1
+
+        static string Name2()
+        {
+            return "Honey, ";
+        }//End Name2
+
+        static string Name3()
+        {
+            return "Darling, ";
+        }//End Name3
+
+        static string Verb1()
+        {
+            return "I love you!";
+        }//End Verb1
+
+        static string Verb2()
+        {
+            return "Call me!";
+        }//End Verb2
+
+        static string Verb3()
+        {
+            return "Be Mine.";
+        }//End Verb3
+
+        static string Verb4()
+        {
+            return "I miss you.";
+        }//End Verb4
+
+
+
+    }//End Class
+}//End Namespace
