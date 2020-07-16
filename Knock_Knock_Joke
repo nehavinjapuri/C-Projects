@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNKnockKnockJoke
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a, b;
+            Console.WriteLine("Knock, knock\n");
+            
+            a = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Boo\n");
+
+            b = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("Don't cry, it's just a joke.");
+            Console.ReadKey();
+
+
+        }
+    }
+}
