@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNAddingGame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaring Variables
+            int score = 0;
+            string userInput = "";
+            int ans = 0;
+            Random rnd = new Random();
+            int turn = 1;
+
+            //Directions
+            Console.WriteLine("Welcome to the Adding Game. You will face 10 addition questions.");
+            Console.WriteLine("After each question, type in your answer and press enter. Press the enter to begin.");
+            Console.WriteLine();
+            Console.ReadKey();
+
+            //While Loop
+            while (turn <= 10)
+            {
+                int ranNum1 = rnd.Next(10, 100);
+                int ranNum2 = rnd.Next(10, 100);
+                int sum = ranNum1 + ranNum2;
+                Console.WriteLine("Find the sum: " + ranNum1 + " + " + ranNum2);
+                userInput = Console.ReadLine();
+                ans = int.Parse(userInput);
+
+
+                //If Statements
+
+                if (ans == sum)
+                {
+                    score = score + 1;
+                    Console.WriteLine("Correct! Your score is " + score + ".");
+                }
+                else
+                {
+                    score = score - 1;
+                    Console.WriteLine("Incorrect. Your score is " + score + ".");
+                }
+                turn++;
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Your score is " + score + "! Thanks for playing!");
+
+            Console.Read();
+            
+        }//End Main
+    }//End Class
+}//End Namespace
+
