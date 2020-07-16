@@ -1,0 +1,183 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNTahoeTrip
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaring Variables
+            string people = "";
+            int numPeople = 0;
+            int room = 5;
+            int bath = 3;
+            string followup = "";
+            string nights = "";
+            int numNight = 0;
+            double price = 0;
+            string breakfast = "";
+            string request = "";
+            string month = "";
+            string day = "";
+            int numDay = 0;
+            string year = "";
+
+
+            //Time
+            Console.WriteLine("Ready to plan your trip to Tahoe? Let's begin!");
+            Console.WriteLine("What month will you be going?");
+            month = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("What day will you be going?");
+            day = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("What year will you be going?");
+            numDay = int.Parse(day);
+            year = Console.ReadLine();
+            Console.WriteLine();
+
+
+
+            //People
+            Console.WriteLine("How many people, including yourself, are going on this trip?");
+            people = Console.ReadLine();
+            Console.WriteLine();
+            numPeople = int.Parse(people);
+
+            while (numPeople > 10 )
+            {
+                Console.WriteLine("Please re-enter the number of people coming. Only 10 people max.");
+                Console.WriteLine("How many people, including yourself, are going on this trip?");
+                people = Console.ReadLine();
+                Console.WriteLine();
+                numPeople = int.Parse(people);
+            }
+
+            while (numPeople <= 0)
+            {
+                Console.WriteLine("Number must be greater than 0");
+                Console.WriteLine("How many people, including yourself, are going on this trip?");
+                people = Console.ReadLine();
+                Console.WriteLine();
+                numPeople = int.Parse(people);
+            }
+
+            //Cascading Ifs (People)
+            
+            if (numPeople <= 8)
+            {
+                room = 4;
+                bath = 2;
+            }
+
+            if (numPeople <= 6)
+            {
+                room = 3;
+                bath = 2;
+            }
+
+            if (numPeople <= 4)
+            {
+                room = 2;
+                bath = 1;
+            }
+
+            if (numPeople <= 2)
+            {
+                room = 1;
+                bath = 1;
+            }
+
+            Console.WriteLine("The house you should get should have " + room + " beds and " + bath + " bathrooms.");
+            Console.WriteLine();
+
+            Console.WriteLine("Would you like to make changes to the number of people? Type yes or no.");
+            followup = Console.ReadLine();
+            Console.WriteLine();
+
+
+
+            while (followup == "yes")
+            {
+                room = 5;
+                bath = 3;
+                Console.WriteLine("How many people are going on the trip, including yourself?");
+                people = Console.ReadLine();
+                Console.WriteLine();
+                numPeople = int.Parse(people);
+                //Cascading Ifs
+                if (numPeople <= 8)
+                {
+                    room = 4;
+                    bath = 2;
+                }
+
+                if (numPeople <= 6)
+                {
+                    room = 3;
+                    bath = 2;
+                }
+
+                if (numPeople <= 4)
+                {
+                    room = 2;
+                    bath = 1;
+                }
+
+                if (numPeople <= 2)
+                {
+                    room = 1;
+                    bath = 1;
+                }
+
+                Console.WriteLine("The house you should get should have " + room + " beds and " + bath + " bathrooms.");
+                Console.WriteLine("Would you like to make changes to the number of people? Type yes or no.");
+                
+                followup = Console.ReadLine();
+                Console.WriteLine();
+
+            }
+            if (followup == "no")
+            {
+                Console.WriteLine("How many nights would you like to stay? (Only up to 5 nights)");
+                nights = Console.ReadLine();
+                Console.WriteLine();
+                numNight = int.Parse(nights);
+                price = numNight * 50 * room;
+
+                Console.WriteLine("Would you like to add breakfast every morning of your stay?");
+                breakfast = Console.ReadLine();
+                Console.WriteLine();
+                if (breakfast == "yes")
+                {
+                    price = price + (numNight * 20);
+                    
+                }
+                Console.WriteLine("Ok! Do you have any special requests when you get there?");
+                request = Console.ReadLine();
+                Console.WriteLine();
+                Console.WriteLine("Ok! Here is your itenary.");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Starting Day: " + month + " " + day + " " + year);
+                Console.WriteLine("Ending Day: " + month + " " + (numDay + numNight) + " " + year);
+                Console.WriteLine("Number of People: " + numPeople);
+                Console.WriteLine("Number of Nights: " + numNight );
+                Console.WriteLine("Breakfast? " + breakfast);
+                Console.WriteLine("Total: $" + price);
+                Console.WriteLine("Special requests: " + request);
+                Console.WriteLine();
+                Console.WriteLine("Enjoy your trip to Tahoe!");
+
+
+            }
+
+            Console.Read();
+
+        }//End Main
+    }//End Class
+}//End Namespace
