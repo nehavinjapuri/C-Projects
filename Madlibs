@@ -1,0 +1,118 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNMadLibs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {//Declaring variables
+            string name1, name2, noun1, noun2;
+            string verb1, verb2, verb3, verb4, verb5;
+            string adj1, adj2, adj3, adj4;
+            string num1, num2, adv;
+
+            //User input: Questions
+
+            Console.WriteLine("Hi! Let's create a MadLib story today! Press enter to continue.\n");
+            Console.ReadKey();
+            Console.WriteLine("After each question, type your answer and press enter. Let's get started. Press enter.\n");
+            Console.ReadKey();
+            Console.WriteLine();
+
+            Console.WriteLine("Give me a girl's name.");
+            name1 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Ok, now give me the name of a celebrity.");
+            name2=Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Name of a household item. (Not beginning with a vowel)");
+            noun1 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Ok, you're getting the hang of this. Name a thing (plural).");
+            noun2 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Verb ending in -ing?");
+            verb1 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Another verb ending in -ing?");
+            verb2 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Yet ANOTHER verb ending in -ing?");
+            verb3 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("What's something you would do if you saw a bear? (Verb ending in -ed)");
+            verb4 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("What's something you hate to do? (Verb ending in -ing)");
+            verb5 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Ok, we're getting closer to the finish. Adjective?");
+            adj1 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("How about antoher adjective?");
+            adj2 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("What's an adjective that would describe your reaction to a balloon popping?");
+            adj3 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Ok, last adjective.");
+            adj4 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Thanks! I need a random number now between 2 and 100000.");
+            num1 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Ok, I need one more number.");
+            num2 = Console.ReadLine();
+            Console.WriteLine();
+
+            Console.WriteLine("Last one, give me an adverb.");
+            adv = Console.ReadLine();
+            Console.WriteLine();
+
+
+
+            Console.WriteLine("Ok, thanks for the words! Press enter and enjoy your story!"); 
+            Console.WriteLine("Remember to evaluate the project on the open google doc.");
+            Console.ReadKey();
+            Console.WriteLine();
+
+            Console.WriteLine("One day, " + "[ " + name1 + " ]" + " was getting ready to go to the dentist's office. ");
+            Console.WriteLine("She felt very " + "[ " + adj1 + " ]" + " because she had been to the dentist’s only " );
+            Console.WriteLine("[ " + num1 + " ]" + " times and was only " + "[ " + num2 + " ]" + " years old. ");
+            Console.WriteLine("Before sitting in the chair, she remembered advice from her friend, " + "[ " + name2 + " ]" + ".");
+            Console.WriteLine("Always start " + "[ " + verb1 + " ]" + ".");
+            Console.WriteLine("The dentist looked at her " + "[ " + adv + " ]" + ", but continued to work. ");
+            Console.WriteLine("He took out his first tool, a " + "[ " + noun1 + " ]" + ", and began to clean her teeth with it. ");
+            Console.WriteLine("It was a very " + "[ " + adj2 + " ]" + " experience. ");
+            Console.WriteLine("Then, he flossed her teeth with " + "[ " + noun2 + " ]" + ".");
+            Console.WriteLine("To this, " + "[ " + name1 + " ]" + " started " + "[ " + verb2 + " ]" + ".");
+            Console.WriteLine("The dentist was " + "[ " + adj3 + " ]" + " and began");
+            Console.WriteLine("[ " + verb3 + " ]" + " away from " + "[ " + name1 + " ]" + ".");
+            Console.WriteLine("[ " + name1 + " ]" + " was so confused that she " + "[ " + verb4 + " ]" + " out the window back home.");
+            Console.WriteLine("She realized that she’d rather go "+"[" + verb5 + "]"+ " than go to the "+"[ " + adj4 + " ]"+" dentist’s office.");
+            Console.WriteLine();
+            Console.WriteLine("Thanks for playing!");
+            Console.Read();
+            
+            //Story output
+        }//End Main
+    }//End Class
+}//End Namespace
