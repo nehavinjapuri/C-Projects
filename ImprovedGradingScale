@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNGradingScaleAgain
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaring Variables
+            string response = "";
+            double grade = 0;
+            string letter = "A";
+
+            //User Input
+            Console.WriteLine("What is your grade right now? (Percentage)");
+            response = Console.ReadLine();
+
+            //Making sure they type in a number between 0 and 100
+            grade = double.Parse(response);
+            while (grade > 100 || grade < 0)
+            {
+                Console.WriteLine("Please enter a number between 0 and 100.");
+                response = Console.ReadLine();
+                grade = double.Parse(response);
+            }
+            
+            //Grading Scale
+            if (grade < 90)
+            {
+                letter = "B";
+            }
+
+            if (grade < 80)
+            {
+                letter = "C";
+            }
+
+            if (grade < 70)
+            {
+                letter = "D";
+            }
+
+            if (grade < 60)
+            {
+                letter = "F";
+            }
+
+            //Messages 
+            if (letter == "A")
+            {
+                Console.WriteLine("You have an A! Good job!");
+            }
+
+            if (letter == "B")
+            {
+                Console.WriteLine("Oh! You have a B. Keep up the good work!");
+            }
+
+            if (letter == "C")
+            {
+                Console.WriteLine("You can pass the class! You have a C.");
+            }
+
+            if (letter == "D")
+            {
+                Console.WriteLine("You have a D. Try getting a tutor or extra help. You got this!");
+            }
+
+            if (letter == "F")
+            {
+                Console.WriteLine("You have an F. Try focusing more in class");
+            }
+
+            Console.Read();
+            
+        }//End Main
+    }//End Class
+}//End Namespace
+
+
+
+
