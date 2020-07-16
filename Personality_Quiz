@@ -1,0 +1,326 @@
+//Declaring Variables
+// Main
+// Color
+// Subject
+// Value
+// Describe
+// Animal
+// Write
+// Place
+// Genre
+// Chocolate
+// Island
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VinjapuriNPersonalityQuiz
+{
+    class Program
+    {
+        //Declaring Variables
+        static int arthur = 0;
+        static int muffy = 0;
+        static int buster = 0;
+        static int francine = 0;
+
+        static void Main(string[] args)
+        {
+            //What Arthur character are you?
+            
+            Console.WriteLine("Welcome to the Arthur Character Quiz! For each question, enter the corresponding number and press enter.");
+            //Color Question (1)
+            Console.WriteLine("What is your favorite color?");
+            Console.WriteLine("1) Yellow , 2) Purple  , 3) Blue ,  4) Red ");
+            Color(Console.ReadLine());
+            Console.WriteLine();
+
+            //Subject Question (2)
+            Console.WriteLine("What is your favorite class at school?");
+            Console.WriteLine("1) Lunch , 2) P.E. , 3) Math , 4) Art ");
+            Subject(Console.ReadLine());
+            Console.WriteLine();
+
+            //Value Question (3)
+            Console.WriteLine("What do you value the most?");
+            Console.WriteLine("1) Money , 2) Friends , 3) Competition , 4) Food ");
+            Value(Console.ReadLine());
+            Console.WriteLine();
+
+            //Describe Question (4)
+            Console.WriteLine("How would you describe yourself?");
+            Console.WriteLine("1) Daring , 2) Quiet , 3) Beautiful , 4) Funny ");
+            Describe(Console.ReadLine());
+            Console.WriteLine();
+
+            //Animal Question (5)
+            Console.WriteLine("Favorite animal?");
+            Console.WriteLine("1) Fox , 2) Turtle , 3) Dog , 4) Cat ");
+            Animal(Console.ReadLine());
+            Console.WriteLine();
+
+            //Write Question (6)
+            Console.WriteLine("Choose a writing utensil.");
+            Console.WriteLine("1) Pen , 2) Pencil , 3) Marker , 4) Crayon ");
+            Write(Console.ReadLine());
+            Console.WriteLine();
+
+            //Place Question (7)
+            Console.WriteLine("Choose a place.");
+            Console.WriteLine("1) Paris , 2) Tokyo , 3) LA , 4) Hawaii ");
+            Place(Console.ReadLine());
+            Console.WriteLine();
+
+            //Genre Question (8)
+            Console.WriteLine("Choose a genre.");
+            Console.WriteLine("1) Romance , 2) Mystery , 3) Horror , 4) Action ");
+            Genre(Console.ReadLine());
+            Console.WriteLine();
+
+            //Chocolate Question (9)
+            Console.WriteLine("Choose a chocolate.");
+            Console.WriteLine("1) Twix , 2) Crunch , 3) Kit-Kat , 4) Snickers ");
+            Chocolate(Console.ReadLine());
+            Console.WriteLine();
+
+            //Island Question (10)
+            Console.WriteLine("Who would you take on a deserted island?");
+            Console.WriteLine("1) Arthur , 2) Buster , 3) Bailey , 4) Nemo (Francine's Cat) ");
+            Island(Console.ReadLine());
+            Console.WriteLine();
+            
+
+            //Percentage Outputs
+            Console.WriteLine("You are " + arthur + "% " + "Arthur.");
+            Console.WriteLine("You are " + muffy + "% " + "Muffy.");
+            Console.WriteLine("You are " + buster + "% " + "Buster.");
+            Console.WriteLine("You are " + francine + "% " + "Francine.");
+            Console.WriteLine("Thanks for playing!");
+            Console.Read();
+        }//End Main
+
+        //Color(Q1)
+        static int Color(string r1)
+        {
+            if (r1 == "1")
+        
+                arthur = arthur + 10;
+              
+            if (r1 == "2")
+            
+                muffy = muffy + 10;
+                
+            if (r1 == "3")
+
+                buster = buster + 10;
+
+            if (r1 == "4")
+
+                francine = francine + 10;
+
+            return 0;
+        }//End Color
+
+        //Subject(Q2)
+        static int Subject(string r1)
+        {
+            if (r1 == "1")
+                buster = buster + 10;
+            
+
+            if (r1 == "2")
+                francine = francine + 10;
+
+
+            if (r1 == "3")
+                arthur = arthur + 10;
+            
+            
+            if (r1 == "4")
+                muffy = muffy + 10;
+
+
+            return 0;
+        }//End Subject
+
+        //Value(Q3)
+        static int Value(string r1)
+        {
+            if (r1 == "1")
+
+                muffy = muffy + 10;
+
+            if (r1 == "2")
+
+                arthur = arthur + 10;
+
+            if (r1 == "3")
+
+                francine = francine + 10;
+
+            if (r1 == "4")
+
+                buster = buster + 10;
+
+            return 0;
+           
+        }//End Value
+
+        //Describe(Q4)
+        static int Describe(string r1)
+        {
+            if (r1 == "1")
+
+                francine = francine + 10;
+
+            if (r1 == "2")
+
+                arthur = arthur + 10;
+
+
+            if (r1 == "3")
+
+                muffy = muffy + 10;
+
+
+            if (r1 == "4")
+
+                buster = buster + 10;
+
+            return 0;
+            
+        }//End Describe
+
+        //Animal(Q5)
+        static int Animal(string r1)
+        {
+            if (r1 == "1")
+                muffy = muffy + 10;
+            
+
+            if (r1 == "2")
+                buster = buster + 10;
+
+
+            if (r1 == "3")
+                arthur = arthur + 10;
+            
+            if (r1 == "4")
+
+                francine = francine + 10;
+
+            return 0;
+        }//End Animal
+
+        //Write(Q6)
+        static int Write(string r1)
+        {
+            if (r1 == "1")
+                muffy = muffy + 10;
+            
+
+            if (r1 == "2")
+                arthur = arthur + 10;
+
+
+            if (r1 == "3")
+                francine = francine + 10;
+
+
+            if (r1 == "4")
+                buster = buster + 10;
+           
+            return 0;
+        }//End Write
+
+        //Place(Q7)
+        static int Place(string r1)
+        {
+            if (r1 == "1")
+                muffy = muffy + 10;
+
+
+            if (r1 == "2")
+                buster = buster + 10;
+
+
+            if (r1 == "3")
+                francine = francine + 10;
+
+            if (r1 == "4")
+                arthur = arthur + 10;
+            
+            return 0;
+        }//End Place
+
+        //Genre(Q8)
+        static int Genre(string r1)
+        {
+            if (r1 == "1")
+                muffy = muffy + 10;
+
+
+            if (r1 == "2")
+                arthur = arthur + 10;
+
+
+            if (r1 == "3")
+                francine = francine + 10;
+
+
+            if (r1 == "4")
+                buster = buster + 10;
+
+            return 0;
+        }//End Genre
+
+        //Chocolate(Q9)
+        static int Chocolate(string r1)
+        {
+            if (r1 == "1")
+
+                buster = buster + 10;
+            
+
+            if (r1 == "2")
+
+                muffy = muffy + 10;
+
+            if (r1 == "3")
+                arthur = arthur + 10;
+
+
+            if (r1 == "4")
+
+                francine = francine + 10;
+
+            return 0;
+        }//End Chocolate
+
+        //Island(Q10)
+        static int Island(string r1)
+        {
+            if (r1 == "1")
+
+                buster = buster + 10;
+            
+            if (r1 == "2")
+                arthur = arthur + 10;
+            
+            if (r1 == "3")
+                muffy = muffy + 10;
+            
+            if (r1 == "4")
+
+                francine = francine + 10;
+
+            return 0;
+           
+        }//End Island
+        
+
+    }//End Class
+}//End Namespace
